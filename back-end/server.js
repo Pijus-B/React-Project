@@ -26,7 +26,10 @@ app.post("/api/products" , async (req, res) => {
     }
 });
 
-// Postman test
+app.delete("/api/products/:id", async (req, res) => {
+    const {id} = req.params;
+    console.log("id:", id);
+})
 
 app.listen(5001, () => {
     connectDB();
